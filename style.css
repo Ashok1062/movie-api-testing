@@ -1,0 +1,150 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background-color: beige;
+}
+.thedu-box{
+    width: 100%;
+    height: 100px;
+    background-color: antiquewhite;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.thedu-box input{
+    font-size: 17px;
+    padding: 10px;
+    outline: none;
+    border-radius: 10px 0 0 10px;
+    border: none;
+    box-shadow: 0 0 5px inset;
+
+}
+.thedu-box button{
+    font-size: 17px;
+    padding: 10px;
+    border: none;
+    border-radius: 0 10px 10px 0;
+    border: none;
+    color: white;
+    text-shadow: 0 0 10px black;
+    box-shadow: 0 0 30px inset rgb(18, 18, 190);
+}
+.list{
+    width: 100%;
+    background-color: beige;
+
+    display: flex;
+    flex-wrap: wrap;
+
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 0;
+}
+.list .box {
+    width: 250px;
+    box-shadow: 0 0 2px black;
+    border-radius: 10px;
+    transition: 1s;
+}
+.box:hover{
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 1);
+}
+.box img{
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+    height: 250px;
+    box-shadow: 0 1px 10px black ;
+}
+.box:hover img{
+     box-shadow: -4px 4px 10px black ;
+     transform: translateX(5px);
+}
+.title{
+    width: 100%;
+    min-height: 70px;
+    padding: 10px;
+    gap: 5px;
+    text-align: center;
+    padding: 10px 0px;
+    /* background-color: whitesmoke; */
+}
+table{
+    width: 100%;
+}
+table tr td{
+    padding: 5px;
+}
+.left-right{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    background-color: beige;
+}
+.left-right img:active{
+    transform: scale(0.90);
+}
+.left-right img:nth-child(1){
+    animation: left 1s infinite alternate;
+}
+.left-right img:nth-child(2){
+    animation: right 1s infinite alternate;
+}
+
+@keyframes right {
+    to{
+        transform: translateX(30px);
+    }
+}
+@keyframes left {
+    to{
+        transform: translateX(-30px);
+    }
+}
+
+/* -------starting show handing------- */
+
+.hand-1{
+    font-size: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: silver;
+    text-shadow: 0 0 10px ;
+    animation: bling 2s infinite alternate;
+}
+
+@keyframes bling {
+    from{
+        opacity: 1;
+    }to{
+        opacity: 0.2;
+    }
+}
+
+/* ----lett and right responsive---- */
+
+@media screen and (max-width:600px) {
+    .left-right img{
+        width: 150px;
+    }
+}
+@media screen and (max-width:400px) {
+
+    @keyframes right {
+    to{
+        transform: translateX(15px);
+    }
+}
+@keyframes left {
+    to{
+        transform: translateX(-15px);
+    }
+}
+}
